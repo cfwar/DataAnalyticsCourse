@@ -1,0 +1,14 @@
+from nltk.corpus import twitter_samples
+print (twitter_samples.fileids())
+
+pos_tweets = twitter_samples.strings('positive_tweets.json')
+print (len(pos_tweets)) # Output: 5000
+ 
+neg_tweets = twitter_samples.strings('negative_tweets.json')
+print (len(neg_tweets)) # Output: 5000
+ 
+all_tweets = twitter_samples.strings('tweets.20150430-223406.json')
+print (len(all_tweets)) # Output: 20000
+ 
+for tweet in pos_tweets[:5]:
+    print (tweet)
